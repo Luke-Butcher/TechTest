@@ -1,18 +1,31 @@
 using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
 builder.Services.AddMassTransit(x =>
 {
+    x.AddConsumer<MyMessageConsumer>();
+
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host("rabbitmq", "/", h =>
+        // Read RabbitMQ connection settings from configuration
+        var host = configuration["RabbitMQ:Host"];
+        var username = configuration["RabbitMQ:Username"];
+        var password = configuration["RabbitMQ:Password"];
+
+        cfg.Host(host, "/", h =>
         {
-            h.Username("guest");
-            h.Password("guest");
+            h.Username(username);
+            h.Password(password);
+        });
+
+        cfg.ReceiveEndpoint("settings-queue", e =>
+        {
+            e.ConfigureConsumer<MyMessageConsumer>(context);
         });
     });
 });

@@ -23,7 +23,7 @@ builder.Services.AddMassTransit(x =>
             h.Password(password);
         });
 
-        cfg.ReceiveEndpoint("my-queue", e =>
+        cfg.ReceiveEndpoint("users-queue", e =>
         {
             e.ConfigureConsumer<MyMessageConsumer>(context);
         });
