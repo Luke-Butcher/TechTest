@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.Gateway", "TechTest.Gateway\TechTest.Gateway.csproj", "{8801C803-D955-4EBE-9E30-CB6BE3951E9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.Gateway", "TechTest.Gateway\TechTest.Gateway.csproj", "{8801C803-D955-4EBE-9E30-CB6BE3951E9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.UserService", "TechTest.UserService\TechTest.UserService.csproj", "{D1C12E36-9DB0-42A0-B032-597013C8E228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.UserService", "TechTest.UserService\TechTest.UserService.csproj", "{D1C12E36-9DB0-42A0-B032-597013C8E228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.SettingsService", "TechTest.SettingsService\TechTest.SettingsService.csproj", "{8462A073-7B15-442A-A2E1-4CEC9D10244F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.SettingsService", "TechTest.SettingsService\TechTest.SettingsService.csproj", "{8462A073-7B15-442A-A2E1-4CEC9D10244F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.SignalRService", "TechTest.SignalRService\TechTest.SignalRService.csproj", "{DF6BF8A6-744C-443F-B157-AA454FDE8390}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.SignalRService", "TechTest.SignalRService\TechTest.SignalRService.csproj", "{DF6BF8A6-744C-443F-B157-AA454FDE8390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{7E281147-F51C-4E17-B44E-045D289C0FCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DF6BF8A6-744C-443F-B157-AA454FDE8390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF6BF8A6-744C-443F-B157-AA454FDE8390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF6BF8A6-744C-443F-B157-AA454FDE8390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E281147-F51C-4E17-B44E-045D289C0FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E281147-F51C-4E17-B44E-045D289C0FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E281147-F51C-4E17-B44E-045D289C0FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E281147-F51C-4E17-B44E-045D289C0FCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

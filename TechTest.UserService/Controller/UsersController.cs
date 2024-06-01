@@ -10,4 +10,10 @@ public class UsersController : ControllerBase
     {
         return Ok("This is a static string response for all users.");
     }
+
+    //[HttpPost]
+    //public IActionResult Post([FromBody] object data)
+    //{
+    //    return Ok($"Received data");
+    //}
 }

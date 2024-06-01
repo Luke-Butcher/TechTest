@@ -9,6 +9,7 @@ builder.Services.AddSignalR();
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<MyMessageConsumer>();
+    x.AddConsumer<AsyncRequestConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
@@ -26,6 +27,10 @@ builder.Services.AddMassTransit(x =>
         cfg.ReceiveEndpoint("users-queue", e =>
         {
             e.ConfigureConsumer<MyMessageConsumer>(context);
+        });
+        cfg.ReceiveEndpoint("async-requests-queue", e =>
+        {
+            e.ConfigureConsumer<AsyncRequestConsumer>(context);
         });
     });
 });
